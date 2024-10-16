@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Submission</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Css/Style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h2>My Profile</h2>
+        <form id="profile-form" autocomplete="off">
+            <label for="firstname">First Name:</label>
+            <input type="text" placeholder="First Name" id="firstname" required>
+
+            <label for="lastname">Last Name:</label>
+            <input type="text" placeholder="Last Name" id="lastname" required>
+
+            <label for="aadharNumber">Aadhaar Number:</label>
+            <input type="text" id="aadharNumber" placeholder="Aadhaar Number" required pattern="\d{12}">
+
+            <label for="email">Email:</label>
+            <input type="email" placeholder="abc@gmail.com" id="email" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="date">Date of Birth:</label>
+            <input type="date" id="date" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" required min="0">
+
+            <label for="country">Country:</label>
+            <input type="text" id="country" required>
+
+            <label for="state">State:</label>
+            <input type="text" placeholder="State" id="state" required>
+
+            <label for="city">City:</label>
+            <input type="text" placeholder="City" id="city" required>
+
+            <button type="submit" class="submit">Submit</button>
+            <div id="message"></div>
+        </form>
+
+        <div id="profile-details"></div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.3/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.3/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-storage-compat.js"></script>
+    
+    <script>
+       // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBGnG1zEiVpnUaC55CuwaAUQPlHSFxx6l4",
+  authDomain: "governmentportal-a7ea9.firebaseapp.com",
+  projectId: "governmentportal-a7ea9",
+  storageBucket: "governmentportal-a7ea9.appspot.com",
+  messagingSenderId: "628596351774",
+  appId: "1:628596351774:web:151ae4434215dbcd689f0f",
+  measurementId: "G-HTYFGJ932S"
+};
+
+
+    </script>
+</body>
+</html>
